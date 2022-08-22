@@ -1,11 +1,17 @@
+import CategoryGrid from '../components/CategoryGrid/CategoryGrid';
+import ContentContainer from '../components/ContentContainer/ContentContainer';
 import Footer from '../components/Footer/Footer';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 function Home() {
   return (
-    <div>
-      <h1>Pedidos</h1>
+    <>
+      <ContentContainer>
+        <SearchBar />
+        <CategoryGrid />
+      </ContentContainer>
       <Footer />
-    </div>
+    </>
   );
 }
 
