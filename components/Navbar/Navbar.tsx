@@ -16,17 +16,17 @@ function Navbar(props: Props) {
             size={25}
             className="bg-white text-green-900 rounded-full p-1"
           />
-          <h1 className="text-white">fastfood</h1>
+          <span className="text-white">fastfood</span>
         </div>
         <div className="flex gap-7">
           <LinkItem href="/" path={path}>
             Pedidos
           </LinkItem>
           <LinkItem href="/kitchen" path={path}>
-            Kitchen
+            Cozinha
           </LinkItem>
           <LinkItem href="/status" path={path}>
-            Status
+            Retirada
           </LinkItem>
         </div>
       </div>
