@@ -1,10 +1,12 @@
 import { GetServerSideProps } from 'next';
+import { useEffect } from 'react';
 import { Product } from '../@types/typings';
 import CategoryGrid from '../components/CategoryGrid/CategoryGrid';
 import ContentContainer from '../components/ContentContainer/ContentContainer';
 import Footer from '../components/Footer/Footer';
 import ProductsGrid from '../components/ProductsGrid/ProductsGrid';
 import SearchBar from '../components/SearchBar/SearchBar';
+import useSearchFilters from '../hooks/filter';
 import requests from '../hooks/requests';
 
 interface Props {
@@ -12,12 +14,24 @@ interface Props {
 }
 
 function Home({ data }: Props) {
+  const {
+    handleSetFilters,
+    setAllProducts,
+    filteredProducts,
+    setFilteredProducts,
+  } = useSearchFilters();
+
+  useEffect(() => {
+    setAllProducts(data);
+    setFilteredProducts(data);
+  }, [data, setAllProducts, setFilteredProducts]);
+
   return (
     <>
       <ContentContainer>
-        <SearchBar />
-        <CategoryGrid />
-        <ProductsGrid products={data} />
+        <SearchBar setFilters={handleSetFilters} />
+        <CategoryGrid setFilters={handleSetFilters} />
+        <ProductsGrid products={filteredProducts} />
       </ContentContainer>
       <Footer />
     </>
