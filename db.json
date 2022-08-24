@@ -1,0 +1,80 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 2,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 3,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 4,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 5,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 6,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 7,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      },
+      {
+        "id": 8,
+        "name": "Smash da casa",
+        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+        "price": 30.50
+      }
+    ],
+    "orders": [
+      {
+        "razaoSocial": "Gamashop",
+        "cnpj": "31.584.480/0001-09",
+        "endereco": "R. Cap. Antônio Rosa, 376",
+        "email": "gamaacademy@gama.com",
+        "telefone": "32301769",
+        "id": 1
+      }
+    ],
+    "quee": [
+      {
+        "id": 1,
+        "transportadora": "Log Express",
+        "cnpj": "31.584.480/0001-09",
+        "endereco": "Rua Alameda dos Mognos, 31",
+        "email": "logexpress@express.com",
+        "telefone": "45619069"
+      }
+    ]
+  }
