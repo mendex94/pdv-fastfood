@@ -5,56 +5,64 @@
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       },
       {
         "id": 2,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+        "name": "El Gato",
+        "description": "O melhor lanche do mundo",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "drink"
       },
       {
         "id": 3,
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       },
       {
         "id": 4,
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       },
       {
         "id": 5,
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       },
       {
         "id": 6,
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       },
       {
         "id": 7,
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       },
       {
         "id": 8,
         "name": "Smash da casa",
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50
+        "price": 30.50,
+        "type": "burger"
       }
     ],
     "orders": [
