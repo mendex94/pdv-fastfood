@@ -4,16 +4,21 @@ import ProductItem from '../Product';
 
 interface Props {
   products: Product[];
+  handleOpenModal: (arg0: Product) => void;
 }
 
-function ProductsGrid({ products }: Props) {
+function ProductsGrid({ products, handleOpenModal }: Props) {
   return (
     <Grid
       title="Produtos"
       subtitle="Selecione um produto para adicionar ao seu pedido"
     >
       {products.map(product => (
-        <ProductItem product={product} key={product.id} />
+        <ProductItem
+          product={product}
+          key={product.id}
+          handleOpenModal={handleOpenModal}
+        />
       ))}
     </Grid>
   );

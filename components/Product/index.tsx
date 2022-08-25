@@ -3,13 +3,15 @@ import { Product } from '../../@types/typings';
 
 interface Props {
   product: Product;
+  handleOpenModal: (arg0: Product) => void;
 }
 
-function ProductItem({ product }: Props) {
+function ProductItem({ product, handleOpenModal }: Props) {
   return (
     <button
       type="button"
       className="flex flex-col items-center hover:scale-110 transition duration-500 mb-5"
+      onClick={() => handleOpenModal(product)}
     >
       <Image
         src={product?.image}
