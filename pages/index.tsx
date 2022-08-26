@@ -11,7 +11,6 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import useSearchFilters from '../hooks/filter';
 import useModal from '../hooks/modal';
 import useOrder from '../hooks/order';
-import requests from '../hooks/requests';
 import products from '../products';
 import store from '../store';
 import { getTotals } from '../store/modules/order';
@@ -67,7 +66,5 @@ function Home({ data }: Props) {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch(requests.fetchProducts);
-  const data = await res.json();
-  return { props: { data } };
+  return { props: {} };
 };
