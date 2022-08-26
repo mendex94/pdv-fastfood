@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Product } from '../@types/typings';
 import CategoryGrid from '../components/CategoryGrid/CategoryGrid';
 import ContentContainer from '../components/ContentContainer/ContentContainer';
@@ -10,12 +11,19 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import useSearchFilters from '../hooks/filter';
 import useModal from '../hooks/modal';
 import requests from '../hooks/requests';
+import store, { RootStore } from '../store';
+import { getTotals } from '../store/modules/order';
 
 interface Props {
   data: Product[];
 }
 
 function Home({ data }: Props) {
+  const { orderItems } = useSelector((state: RootStore) => state.order);
+  useEffect(() => {
+    store.dispatch(getTotals());
+  }, [orderItems]);
+
   const {
     handleSetFilters,
     setAllProducts,

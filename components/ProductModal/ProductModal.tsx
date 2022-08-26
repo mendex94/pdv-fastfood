@@ -25,31 +25,6 @@ function ProductModal({ product, modalState, handleCloseModal }: ModalProps) {
           </button>
         </div>
         <ModalProduct product={product} />
-        <h2 className="font-bold">Observações</h2>
-        <form>
-          <textarea
-            name="notes"
-            id="notes"
-            cols={30}
-            rows={5}
-            placeholder="Adicione uma observação ao produto"
-            className="w-full p-4"
-          />
-        </form>
-        <div className="w-full flex justify-end gap-8">
-          <button
-            type="button"
-            className="bg-white border-2 border-green-900 text-green-900 px-6 py-2 font-bold rounded-md"
-          >
-            Continuar comprando
-          </button>
-          <button
-            type="button"
-            className="bg-green-900 text-white px-6 py-2 font-bold rounded-md"
-          >
-            Adicionar ao pedido
-          </button>
-        </div>
       </div>
     </div>
   );

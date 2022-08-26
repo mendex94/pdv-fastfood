@@ -6,7 +6,8 @@
         "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
         "price": 30.50,
-        "type": "burger"
+        "type": "burger",
+        "orderQuantity": 0
       },
       {
         "id": 2,
@@ -15,6 +16,7 @@
         "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
         "price": 30.50,
         "type": "drink"
+
       },
       {
         "id": 3,
