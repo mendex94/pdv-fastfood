@@ -47,7 +47,7 @@ function ModalProduct({ product }: ModalProductProps) {
           cols={30}
           rows={5}
           placeholder="Adicione uma observação ao produto"
-          className="w-full p-4"
+          className="w-full p-4 resize-none"
         />
       </form>
       <div className="w-full flex justify-end gap-8">

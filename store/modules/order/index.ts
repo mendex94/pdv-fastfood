@@ -43,6 +43,10 @@ const orderSlice = createSlice({
         state.orderItems = newOrderItems;
       }
     },
+    cancelOrder(state) {
+      const newOrderItems: Product[] = [];
+      state.orderItems = newOrderItems;
+    },
     getTotals(state) {
       const { total, quantity } = state.orderItems.reduce(
         (
@@ -63,7 +67,12 @@ const orderSlice = createSlice({
   },
 });
 
-export const { addToOrder, removeFromOrder, decreaseOrderQuantity, getTotals } =
-  orderSlice.actions;
+export const {
+  addToOrder,
+  removeFromOrder,
+  decreaseOrderQuantity,
+  getTotals,
+  cancelOrder,
+} = orderSlice.actions;
 
 export default orderSlice.reducer;

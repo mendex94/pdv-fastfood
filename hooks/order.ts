@@ -1,7 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Product } from '../@types/typings';
 import { RootStore } from '../store';
-import { addToOrder, decreaseOrderQuantity } from '../store/modules/order';
+import {
+  addToOrder,
+  cancelOrder,
+  decreaseOrderQuantity,
+} from '../store/modules/order';
 
 function useOrder() {
   const dispatch = useDispatch();
@@ -20,10 +24,18 @@ function useOrder() {
     return order.orderItems[itemIndex]?.orderQuantity;
   };
 
+  const order = useSelector((state: RootStore) => state.order);
+
+  const useCancelOrder = () => {
+    dispatch(cancelOrder());
+  };
+
   return {
     handleAddToOrder,
     handleDecreaseOrderQuantity,
     useProductQty,
+    useCancelOrder,
+    order,
   };
 }
 

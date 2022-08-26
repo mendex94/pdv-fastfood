@@ -1,4 +1,8 @@
-function Footer() {
+interface Props {
+  cancelOrder: () => void;
+}
+
+function Footer({ cancelOrder }: Props) {
   return (
     <footer className="bg-green-900 fixed bottom-0 w-full">
       <div className="container mx-auto py-3 flex justify-end">
@@ -6,6 +10,7 @@ function Footer() {
           <button
             type="button"
             className="text-gray-400 bg-white border-2 border-gray-400 font-bold px-6 py-2 rounded-md"
+            onClick={() => cancelOrder()}
           >
             Cancelar
           </button>

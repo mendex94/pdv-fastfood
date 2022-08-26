@@ -1,17 +1,19 @@
 import { GetServerSideProps } from 'next';
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { Product } from '../@types/typings';
 import CategoryGrid from '../components/CategoryGrid/CategoryGrid';
 import ContentContainer from '../components/ContentContainer/ContentContainer';
 import Footer from '../components/Footer/Footer';
+import OrderTotals from '../components/OderTotals/OrderTotals';
 import ProductModal from '../components/ProductModal/ProductModal';
 import ProductsGrid from '../components/ProductsGrid/ProductsGrid';
 import SearchBar from '../components/SearchBar/SearchBar';
 import useSearchFilters from '../hooks/filter';
 import useModal from '../hooks/modal';
+import useOrder from '../hooks/order';
 import requests from '../hooks/requests';
-import store, { RootStore } from '../store';
+import products from '../products';
+import store from '../store';
 import { getTotals } from '../store/modules/order';
 
 interface Props {
@@ -19,10 +21,12 @@ interface Props {
 }
 
 function Home({ data }: Props) {
-  const { orderItems } = useSelector((state: RootStore) => state.order);
+  const { order, useCancelOrder } = useOrder();
+  const productsArr = products;
+
   useEffect(() => {
     store.dispatch(getTotals());
-  }, [orderItems]);
+  }, [order.orderItems]);
 
   const {
     handleSetFilters,
@@ -35,9 +39,9 @@ function Home({ data }: Props) {
     useModal();
 
   useEffect(() => {
-    setAllProducts(data);
-    setFilteredProducts(data);
-  }, [data, setAllProducts, setFilteredProducts]);
+    setAllProducts(productsArr);
+    setFilteredProducts(productsArr);
+  }, [data, productsArr, setAllProducts, setFilteredProducts]);
 
   return (
     <>
@@ -48,13 +52,14 @@ function Home({ data }: Props) {
           products={filteredProducts}
           handleOpenModal={handleOpenModal}
         />
+        <OrderTotals order={order} />
       </ContentContainer>
       <ProductModal
         product={modalProduct}
         handleCloseModal={handleCloseModal}
         modalState={modalState}
       />
-      <Footer />
+      <Footer cancelOrder={useCancelOrder} />
     </>
   );
 }
