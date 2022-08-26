@@ -12,6 +12,7 @@ import useSearchFilters from '../hooks/filter';
 import useModal from '../hooks/modal';
 import useOrder from '../hooks/order';
 import requests from '../hooks/requests';
+import products from '../products';
 import store from '../store';
 import { getTotals } from '../store/modules/order';
 
@@ -21,6 +22,7 @@ interface Props {
 
 function Home({ data }: Props) {
   const { order, useCancelOrder } = useOrder();
+  const productsArr = products;
 
   useEffect(() => {
     store.dispatch(getTotals());
@@ -37,9 +39,9 @@ function Home({ data }: Props) {
     useModal();
 
   useEffect(() => {
-    setAllProducts(data);
-    setFilteredProducts(data);
-  }, [data, setAllProducts, setFilteredProducts]);
+    setAllProducts(productsArr);
+    setFilteredProducts(productsArr);
+  }, [data, productsArr, setAllProducts, setFilteredProducts]);
 
   return (
     <>
