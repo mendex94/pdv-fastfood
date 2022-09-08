@@ -1,97 +1,133 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      },
-      {
-        "id": 2,
-        "name": "El Gato",
-        "description": "O melhor lanche do mundo",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "drink",
-        "orderQuantity": 0
-
-      },
-      {
-        "id": 3,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      },
-      {
-        "id": 4,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      },
-      {
-        "id": 5,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      },
-      {
-        "id": 6,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      },
-      {
-        "id": 7,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      },
-      {
-        "id": 8,
-        "name": "Smash da casa",
-        "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
-        "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
-        "price": 30.50,
-        "type": "burger",
-        "orderQuantity": 0
-      }
-    ],
-    "orders": [
-      {
-        "razaoSocial": "Gamashop",
-        "cnpj": "31.584.480/0001-09",
-        "endereco": "R. Cap. Antônio Rosa, 376",
-        "email": "gamaacademy@gama.com",
-        "telefone": "32301769",
-        "id": 1
-      }
-    ],
-    "quee": [
-      {
-        "id": 1,
-        "transportadora": "Log Express",
-        "cnpj": "31.584.480/0001-09",
-        "endereco": "Rua Alameda dos Mognos, 31",
-        "email": "logexpress@express.com",
-        "telefone": "45619069"
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    },
+    {
+      "id": 2,
+      "name": "El Gato",
+      "description": "O melhor lanche do mundo",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "drink",
+      "orderQuantity": 0
+    },
+    {
+      "id": 3,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    },
+    {
+      "id": 4,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    },
+    {
+      "id": 5,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    },
+    {
+      "id": 6,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    },
+    {
+      "id": 7,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    },
+    {
+      "id": 8,
+      "name": "Smash da casa",
+      "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+      "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+      "price": 30.5,
+      "type": "burger",
+      "orderQuantity": 0
+    }
+  ],
+  "orders": [
+    {
+      "orderItems": [
+        {
+          "id": 2,
+          "name": "El Gato",
+          "description": "O melhor lanche do mundo",
+          "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+          "price": 30.5,
+          "type": "drink",
+          "orderQuantity": 2,
+          "note": ""
+        }
+      ],
+      "orderTotalQuantity": 2,
+      "orderTotalAmount": 61,
+      "clientName": "Felipe",
+      "id": 3
+    },
+    {
+      "orderItems": [
+        {
+          "id": 7,
+          "name": "Smash da casa",
+          "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+          "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+          "price": 30.5,
+          "type": "burger",
+          "orderQuantity": 1,
+          "note": "Sem cebola"
+        }
+      ],
+      "orderTotalQuantity": 1,
+      "orderTotalAmount": 30.5,
+      "clientName": "Mendes",
+      "id": 6
+    }
+  ],
+  "quee": [
+    {
+      "orderItems": [
+        {
+          "id": 8,
+          "name": "Smash da casa",
+          "description": "2x hamburger 200g, queijo, cheddar, tomate, alface, picles, cebola, molho da casa",
+          "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+          "price": 30.5,
+          "type": "burger",
+          "orderQuantity": 0
+        }
+      ],
+      "orderTotalQuantity": "1",
+      "orderTotalAmount": 30.5,
+      "clientName": "Felipe",
+      "id": 1
+    }
+  ]
+}

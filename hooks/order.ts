@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Product } from '../@types/typings';
 import { RootStore } from '../store';
@@ -5,6 +6,7 @@ import {
   addToOrder,
   cancelOrder,
   decreaseOrderQuantity,
+  dispatchOrder,
 } from '../store/modules/order';
 
 function useOrder() {
@@ -26,8 +28,18 @@ function useOrder() {
 
   const order = useSelector((state: RootStore) => state.order);
 
+  const exchangeCalc = (value: number) => {
+    const exchange = value - order.orderTotalAmount;
+    return exchange;
+  };
+
   const useCancelOrder = () => {
     dispatch(cancelOrder());
+    Router.push('/');
+  };
+
+  const useDispatchOrder = (name: string) => {
+    dispatch(dispatchOrder(name));
   };
 
   return {
@@ -35,6 +47,8 @@ function useOrder() {
     handleDecreaseOrderQuantity,
     useProductQty,
     useCancelOrder,
+    exchangeCalc,
+    useDispatchOrder,
     order,
   };
 }
