@@ -13,7 +13,7 @@ function ProductModal({ product, modalState, handleCloseModal }: ModalProps) {
     <div
       className={
         modalState
-          ? 'flex-col z-50 flex fixed inset-0 w-screen h-screen bg-[#000000]/40 backdrop-blur-sm gap-8 p-8 transition ease-in-out duration-500'
+          ? 'flex-col z-50 flex fixed inset-0 w-screen bg-[#000000]/40 backdrop-blur-sm gap-8 p-8 transition ease-in-out duration-500'
           : 'hidden transition-all duration-500'
       }
     >

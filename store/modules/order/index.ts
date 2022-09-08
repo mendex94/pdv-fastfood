@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import { Order, Product } from '../../../@types/typings';
+import { sendOrder } from '../../../services/orders';
 
 const initialState: Order = {
   orderItems: [],
@@ -47,6 +48,10 @@ const orderSlice = createSlice({
       const newOrderItems: Product[] = [];
       state.orderItems = newOrderItems;
     },
+    dispatchOrder(state, action) {
+      state.clientName = action.payload;
+      sendOrder(state);
+    },
     getTotals(state) {
       const { total, quantity } = state.orderItems.reduce(
         (
@@ -73,6 +78,7 @@ export const {
   decreaseOrderQuantity,
   getTotals,
   cancelOrder,
+  dispatchOrder,
 } = orderSlice.actions;
 
 export default orderSlice.reducer;

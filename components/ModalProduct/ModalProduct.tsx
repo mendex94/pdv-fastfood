@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useState } from 'react';
 import { Product } from '../../@types/typings';
 import useOrder from '../../hooks/order';
 import QuantityButton from '../QuantityButton/QuantityButton';
@@ -11,6 +12,18 @@ function ModalProduct({ product }: ModalProductProps) {
   const { handleAddToOrder, useProductQty, handleDecreaseOrderQuantity } =
     useOrder();
 
+  const [notes, setNotes] = useState('');
+
+  const newProduct = {
+    id: product.id,
+    name: product.name,
+    description: product.description,
+    image: product.image,
+    price: product.price,
+    type: product.type,
+    orderQuantity: product.orderQuantity,
+    note: notes,
+  };
   return (
     <>
       <div className="flex justify-between">
@@ -30,7 +43,7 @@ function ModalProduct({ product }: ModalProductProps) {
             <QuantityButton
               handleAddToOrder={handleAddToOrder}
               handleDecreaseOrderQuantity={handleDecreaseOrderQuantity}
-              product={product}
+              product={newProduct}
               useOrderQty={useProductQty}
             />
           </div>
@@ -48,6 +61,7 @@ function ModalProduct({ product }: ModalProductProps) {
           rows={5}
           placeholder="Adicione uma observação ao produto"
           className="w-full p-4 resize-none"
+          onKeyUp={e => setNotes((e.target as HTMLInputElement).value)}
         />
       </form>
       <div className="w-full flex justify-end gap-8">
@@ -60,7 +74,7 @@ function ModalProduct({ product }: ModalProductProps) {
         <button
           type="button"
           className="bg-green-900 text-white px-6 py-2 font-bold rounded-md"
-          onClick={() => handleAddToOrder(product)}
+          onClick={() => handleAddToOrder(newProduct)}
         >
           Adicionar ao pedido
         </button>
