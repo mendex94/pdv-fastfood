@@ -128,6 +128,24 @@
       "orderTotalAmount": 30.5,
       "clientName": "Felipe",
       "id": 1
+    },
+    {
+      "orderItems": [
+        {
+          "id": 2,
+          "name": "El Gato",
+          "description": "O melhor lanche do mundo",
+          "image": "https://files.deliveryturbo.com.br/stores/img__56/bb75c5e4cd1639a0314957a229d60ae9.jpg",
+          "price": 30.5,
+          "type": "drink",
+          "orderQuantity": 1,
+          "note": "Sem cebola"
+        }
+      ],
+      "orderTotalQuantity": 1,
+      "orderTotalAmount": 30.5,
+      "clientName": "Maria",
+      "id": 7
     }
   ]
 }
