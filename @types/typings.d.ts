@@ -10,7 +10,7 @@ export interface Product {
 }
 
 export interface Order {
-  orderItems: [] | Product[];
+  orderItems: Product[];
   orderTotalQuantity: number;
   orderTotalAmount: number;
   clientName: string;

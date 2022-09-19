@@ -21,7 +21,7 @@ const orderSlice = createSlice({
       if (itemIndex >= 0) {
         state.orderItems[itemIndex].orderQuantity += 1;
       } else {
-        const tempItem: Product[] = { ...action.payload, orderQuantity: 1 };
+        const tempItem: Product = { ...action.payload, orderQuantity: 1 };
         state.orderItems.push(tempItem);
       }
     },

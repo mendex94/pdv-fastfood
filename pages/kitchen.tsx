@@ -23,9 +23,11 @@ function Kitchen() {
       </div>
       <div className="px-8">
         <h2 className="font-bold text-2xl pb-8">Pronto:</h2>
-        {quee.map(order => (
-          <QueeCard order={order} key={order.id} />
-        ))}
+        <div className="flex flex-col gap-8">
+          {quee.map(order => (
+            <QueeCard order={order} key={order.id} />
+          ))}
+        </div>
       </div>
     </GridContainer>
   );
