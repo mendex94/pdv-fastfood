@@ -11,7 +11,7 @@ Um restaurante precisa poder registrar suas vendas de forma fácil e rápida, es
 
 Pensando nessa problemática usei Next.js e TypeScript para construir a interface e Redux Toolkit para a persistencia de dados, apliquei conceitos de metodologias ágeis para auxiliar no gerenciamento do projeto e também realizei todo Git Flow.
 
-Para acessar o projeto: https://pdv-fastfood-3acgdi79q-mendex94.vercel.app/
+Para acessar o projeto: https://pdv-fastfood.vercel.app/
 
 ## Como iniciar o projeto:
 
