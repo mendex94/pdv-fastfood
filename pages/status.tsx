@@ -1,13 +1,10 @@
-import { useEffect } from 'react';
 import GridContainer from '../components/GridContainer/GridContainer';
-import UseOrderPooling from '../hooks/orderPooling';
+import useOrderFetch from '../hooks/orderFetch';
+import UseOrderPooling from '../hooks/queeFetch';
 
 function Status() {
-  const { orders, orderPooling, getQueeData, quee } = UseOrderPooling();
-  useEffect(() => {
-    setTimeout(orderPooling, 10000);
-    setTimeout(getQueeData, 10000);
-  }, [orderPooling, getQueeData]);
+  const { quee } = UseOrderPooling();
+  const { orders } = useOrderFetch();
 
   return (
     <GridContainer>

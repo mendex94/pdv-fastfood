@@ -21,7 +21,7 @@ function OrderCard({ order }: Props) {
         ))}
       </div>
       <div className="flex gap-4">
-        <button type="button" onClick={() => sendQuee(order)}>
+        <button type="button" onClick={() => sendQuee(order, order.id)}>
           <Check size={22} weight="fill" className="text-green-900" />
         </button>
         <button type="button" onClick={() => deleteOrder(order.id)}>

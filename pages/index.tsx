@@ -11,7 +11,7 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import useSearchFilters from '../hooks/filter';
 import useModal from '../hooks/modal';
 import useOrder from '../hooks/order';
-import products from '../products';
+import supabase from '../services/supabaseClient';
 import store from '../store';
 import { getTotals } from '../store/modules/order';
 
@@ -21,7 +21,6 @@ interface Props {
 
 function Home({ data }: Props) {
   const { order, useCancelOrder } = useOrder();
-  const productsArr = products;
 
   useEffect(() => {
     store.dispatch(getTotals());
@@ -38,9 +37,9 @@ function Home({ data }: Props) {
     useModal();
 
   useEffect(() => {
-    setAllProducts(productsArr);
-    setFilteredProducts(productsArr);
-  }, [data, productsArr, setAllProducts, setFilteredProducts]);
+    setAllProducts(data);
+    setFilteredProducts(data);
+  }, [data, setAllProducts, setFilteredProducts]);
 
   return (
     <>
@@ -66,5 +65,9 @@ function Home({ data }: Props) {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  return { props: {} };
+  const { data, error } = await supabase.from('products').select('*');
+  if (error) {
+    console.log(error);
+  }
+  return { props: { data } };
 };

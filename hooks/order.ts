@@ -1,6 +1,7 @@
 import Router from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Product } from '../@types/typings';
+import { sendOrder } from '../services/orders';
 import { RootStore } from '../store';
 import {
   addToOrder,
@@ -40,6 +41,7 @@ function useOrder() {
 
   const useDispatchOrder = (name: string) => {
     dispatch(dispatchOrder(name));
+    sendOrder(order);
   };
 
   return {

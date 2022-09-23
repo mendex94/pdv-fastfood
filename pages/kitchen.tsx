@@ -1,15 +1,12 @@
-import { useEffect } from 'react';
 import GridContainer from '../components/GridContainer/GridContainer';
 import OrderCard from '../components/OrderCard/OrderCard';
 import QueeCard from '../components/QueeCard/QueeCard';
-import UseOrderPooling from '../hooks/orderPooling';
+import useOrderFetch from '../hooks/orderFetch';
+import UseOrderPooling from '../hooks/queeFetch';
 
 function Kitchen() {
-  const { orders, orderPooling, getQueeData, quee } = UseOrderPooling();
-  useEffect(() => {
-    setTimeout(orderPooling, 10000);
-    setTimeout(getQueeData, 10000);
-  }, [orderPooling, getQueeData]);
+  const { quee } = UseOrderPooling();
+  const { orders } = useOrderFetch();
 
   return (
     <GridContainer>
