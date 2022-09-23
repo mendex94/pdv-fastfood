@@ -13,7 +13,7 @@ function OrderTotals({ order }: Props) {
           : 'w-full border-2 border-gray-400 rounded-md p-12'
       }
     >
-      <div className="border-b-gray-400 border-2 border-dashed pb-4 flex flex-col mb-4">
+      <div className="border-b-gray-400 border-2 border-dashed p-4 flex flex-col mb-4">
         {order.orderItems.map((product: Product) => (
           <div className="flex justify-between" key={product.id}>
             <p>{`${product.orderQuantity}x ${product.name}`}</p>

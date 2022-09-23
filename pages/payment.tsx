@@ -1,19 +1,23 @@
 import { Cardholder } from 'phosphor-react';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import CheckoutModal from '../components/CheckoutModal/CheckoutModal';
 import ContentContainer from '../components/ContentContainer/ContentContainer';
 import OrderTotals from '../components/OderTotals/OrderTotals';
 import PaymentOptions from '../components/PaymentOptions/PaymentOptions';
 import useModal from '../hooks/modal';
 import useOrder from '../hooks/order';
+import { dispatchOrder } from '../store/modules/order';
 
 function Payment() {
   const { order, useCancelOrder } = useOrder();
+  const dispatch = useDispatch();
 
   const { HandleCheckoutModalOpen, HandleCheckoutModalClose, modalState } =
     useModal();
 
-  const [clientName, setName] = useState('');
+  const setName = (name: string) => {
+    dispatch(dispatchOrder(name));
+  };
 
   return (
     <ContentContainer>
@@ -51,7 +55,7 @@ function Payment() {
         <button
           type="button"
           className="text-white bg-green-900 font-bold px-6 py-2 rounded-md"
-          onClick={() => HandleCheckoutModalOpen(clientName)}
+          onClick={() => HandleCheckoutModalOpen(order.clientName)}
         >
           Finalizar pedido
         </button>

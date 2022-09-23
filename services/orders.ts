@@ -1,30 +1,23 @@
 import { Order } from '../@types/typings';
-import api from './api';
+import supabase from './supabaseClient';
 
-export const getOrders = async (): Promise<Order[]> => {
-  const response = await api.get<Order[]>('/orders');
-  return response.data;
+export const sendOrder = async (order: Omit<Order, 'id'>) => {
+  const { status } = await supabase.from('orders').insert(order);
+  return status;
 };
 
-export const sendOrder = async (order: Omit<Order, 'id'>): Promise<Order> => {
-  const response = await api.post<Order>('/orders', order);
-  return response.data;
+export const deleteOrder = async (id: number | undefined) => {
+  const { data, error } = await supabase.from('orders').delete().match({ id });
+  return { data, error };
 };
 
-export const deleteOrder = async (id: number | undefined): Promise<void> => {
-  await api.delete(`/orders/${id}`);
+export const deleteQuee = async (id: number | undefined) => {
+  const { data, error } = await supabase.from('quee').delete().match({ id });
+  return { data, error };
 };
 
-export const getQuee = async (): Promise<Order[]> => {
-  const response = await api.get<Order[]>('/quee');
-  return response.data;
-};
-
-export const deleteQuee = async (id: number | undefined): Promise<void> => {
-  await api.delete(`/quee/${id}`);
-};
-
-export const sendQuee = async (order: Omit<Order, 'id'>): Promise<Order> => {
-  const response = await api.post<Order>('/quee', order);
-  return response.data;
+export const sendQuee = async (order: Order, id: number | undefined) => {
+  const { data, error } = await supabase.from('orders').delete().match({ id });
+  const { status } = await supabase.from('quee').insert(order);
+  return { status, data, error };
 };
