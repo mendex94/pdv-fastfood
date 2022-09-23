@@ -20,9 +20,6 @@ npm run dev
 # ou
 yarn dev
 
-# para iniciar a api com os dados mockados é preciso usar o json-server a partir do diretório root.
-
-json-server --watch db.json -p 3333
 ```
 
 Histórias de Usuário 🧑‍🍳
@@ -38,7 +35,6 @@ Histórias de Usuário 🧑‍🍳
 
 Histórias Bônus (opcionais) 💘
 - Os pedidos devem aparecer para a cozinha em tempo real. ✅
-Obs: Utilização de Long Pooling ou WebSockets facilitam a solução. ( Utilizei long pooling para resolver essa história, porém estou estudando a alteração para websockets )
 - O usuário poderá incluir uma observação a cozinha. ✅
 - O usuário poderá atribuir múltiplas formas de pagamento na finalização do pedido. ✅
 - Os pedidos baixados devem aparecer em uma tela com o nome do cliente, apitando para ser feito a retirada. ✅
